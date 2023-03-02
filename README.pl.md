@@ -35,13 +35,13 @@ Aby skonfigurować deployment projektu należy wykonać kilka dodatkowych krokó
 konfigurowania twojego repozytorium. Wejdź w zakładkę `Settings` i w podsekcji
 `Actions` wybierz punkt `General`.
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+![GitHub actions settings](assetsctions-config-step-1.png)
 
 Przejdź do ostatniej sekcji, w której upewnij się, że wybrane opcje są takie
 same jak na następnym obrazku i kliknij `Save`. Bez tych ustawień w module
 zbierającym będzie zbyt mało pozwoleń dla automatyzacji procesu deploymentu.
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+![GitHub actions settings](assetsctions-config-step-2.png)
 
 Wersja produkcyjna projektu będzie automatycznie gromadzić się i deployować na
 GitHub Pages w gałęzi `gh-pages` za każdym razem, gdy aktualizuje się gałąź
@@ -61,7 +61,7 @@ Dalej należy wejść w ustawienia repozytorium GitHub (`Settings` > `Pages`) i
 wystawić dystrybucję wersji produkcyjnej z folderu `/root` gałęzi `gh-pages`,
 jeśli nie zrobiło się to automatycznie.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+![GitHub Pages settings](assetsepo-settings.png)
 
 ### Status deploymentu
 
@@ -76,7 +76,7 @@ identyfikatora.
 Więcej informacji o statusie można zobaczyć klikając na ikonkę i w wyskakującym
 oknie przejść do odnośnika `Details`.
 
-![Deployment status](./assets/status.png)
+![Deployment status](assetstatus.png)
 
 ### Działająca strona
 
@@ -92,7 +92,7 @@ właściwości `homepage` lub skryptu `build` w pliku `package.json`.
 
 ## Jak to działa
 
-![How it works](./assets/how-it-works.png)
+![How it works](assetsow-it-works.png)
 
 1. Po każdym pushu w gałęzi `main` repozytorium GitHub, włącza się specjalny
    skrypt (GitHub Action) z pliku `.github/workflows/deploy.yml`.

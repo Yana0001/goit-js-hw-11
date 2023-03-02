@@ -15,7 +15,7 @@ para conocer y personalizar las funciones adicionales.
 6. Instala las dependencias del proyecto en el terminal con el comando `npm install`.
 7. Inicia el modo de desarrollo, ejecutando el comando `npm start`.
 8. Ve a la dirección [http://localhost:1234](http://localhost:1234) en tu navegador.
-   Esta página se recargará automáticamente después de guardar los cambios en los 
+   Esta página se recargará automáticamente después de guardar los cambios en los
    archivos del proyecto.
 
 ## Archivos y carpetas
@@ -23,26 +23,26 @@ para conocer y personalizar las funciones adicionales.
 - Todos los partials de los archivos de estilo deben estar en la carpeta `src/sass`
   y ser importados en los archivos de estilos de la página. Por ejemplo, para
  `index.html` el archivo de estilos se llama `index.scss`.
-- Añade las imágenes a la carpeta `src/images`. El ensamblador las optimizará, 
+- Añade las imágenes a la carpeta `src/images`. El ensamblador las optimizará,
   pero sólo cuando se cargue la versión de producción del proyecto. Todo esto
-  se hace en la nube, para no sobrecargar tu ordenador, ya que puede tardar 
+  se hace en la nube, para no sobrecargar tu ordenador, ya que puede tardar
   mucho en máquinas poco potentes.
 
 ## Deploy
 
-Para configurar un proyecto para ser implementado, hay algunos pasos adicionales 
+Para configurar un proyecto para ser implementado, hay algunos pasos adicionales
 para configurar tu repositorio. Ve a la pestaña `Settings` y en la subsección
 `Actions`, selecciona la opción `General`.
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+![GitHub actions settings](assetsctions-config-step-1.png)
 
 Baja hasta la última sección, asegurándote de que las opciones esten seleccionadas
 como en la siguiente imagen, y haz clic en `Save`. Sin estas opciones, la compilación
 no tendrá suficientes permisos para automatizar el proceso de implementación.
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+![GitHub actions settings](assetsctions-config-step-2.png)
 
-La versión de producción del proyecto se compilará e implementará automáticamente 
+La versión de producción del proyecto se compilará e implementará automáticamente
 en GitHub Pages, en la rama `gh-pages`, cada vez que se actualice la rama `main`.
 Por ejemplo, después de un push directo o de un pool request aceptado. Para
 ello, edita el campo `homepage` y el script `build` en el archivo `package.json`,
@@ -56,11 +56,11 @@ los cambios a GitHub.
 },
 ```
 
-A continuación, hay que ir a la configuración del repositorio de GitHub 
+A continuación, hay que ir a la configuración del repositorio de GitHub
 (`Settings` > `Pages`) y seleccionar que la versión de producción de los archivos
 se distribuya desde la carpeta `/root` de la rama `gh-pages`, si no se hizo automáticamente.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+![GitHub Pages settings](assetsepo-settings.png)
 
 ### Estado del deploy
 
@@ -70,10 +70,10 @@ El estado del deploy del último commit se indica con un icono junto a su identi
 - **Color verde** - el deploy se completó con éxito.
 - **Color rojo** - Se ha producido un error durante el linting, la compilación o el deploy.
 
-Se puede ver información de estado más detallada haciendo clic en el icono y 
+Se puede ver información de estado más detallada haciendo clic en el icono y
 en el enlace `Details` de la ventana desplegable.
 
-![Deployment status](./assets/status.png)
+![Deployment status](assetstatus.png)
 
 ### Página activa
 
@@ -84,16 +84,16 @@ está el enlace a la versión activa de este repositorio.
 
 Si se abre una página en blanco, asegúrese de que no haya errores en la pestaña
 `Console` relacionados con rutas incorrectas a los archivos CSS y JS del proyecto (**404**).
-Lo más probable es que tenga un valor incorrecto para la propiedad `homepage` o el 
+Lo más probable es que tenga un valor incorrecto para la propiedad `homepage` o el
 script `build` en el archivo `package.json`.
 
 ## ¿Cómo funciona?
 
-![How it works](./assets/how-it-works.png)
+![How it works](assetsow-it-works.png)
 
-1. Después de cada push a la rama `main` del repositorio GitHub, se ejecuta un 
+1. Después de cada push a la rama `main` del repositorio GitHub, se ejecuta un
    script especial (GitHub Action) del archivo `.github/workflows/deploy.yml`.
-2. Todos los archivos del repositorio se copian en el servidor, donde el 
+2. Todos los archivos del repositorio se copian en el servidor, donde el
    proyecto se inicializa y se compila antes de ser desplegado.
 3. Si todos los pasos tienen éxito, la versión de producción compilada de los
    archivos del proyecto se envía a la rama `gh-pages`. De lo contrario, el

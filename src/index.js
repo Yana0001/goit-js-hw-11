@@ -1,7 +1,7 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
-import { fetchImages } from './fetchAPI';
+import {fetchImages} from './fetchAPI';
 
 const searchQuery = document.querySelector('input[name="searchQuery"]');
 const closeBtn = document.querySelector('.close-btn');

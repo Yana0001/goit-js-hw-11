@@ -1,0 +1,64 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.photo-card {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.gallery-item {
+  display: block;
+  text-align: center;
+}
+
+.gallery__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.info__box {
+  display: flex;
+  align-items: center;
+}
+
+.info-item {
+  margin-right: 5px;
+  color: #333;
+}
+
+.info-counter {
+  color: #999;
+}
+
+.material-symbols-outlined:before {
+  display: inline-block;
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  vertical-align: middle;
+}
