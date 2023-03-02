@@ -1,11 +1,36 @@
+// оголошення змінних для використання в стилях
+$primary-color: #004018;
+$secondary-color: #6c757d;
+
+// стилі для кнопки "Load more"
 .load-more {
   display: block;
-  margin: 20px auto;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $primary-color;
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  border-radius: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(1, 38, 20, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
 }

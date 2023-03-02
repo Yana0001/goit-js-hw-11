@@ -1,37 +1,82 @@
-.info__box {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
+// оголошення змінних для використання в стилях
+$search-form-bg-color: #f7f7f7;
+$search-form-border-color: #ccc;
+$search-form-border-radius: 10px;
+$search-form-input-padding: 0.5rem 1rem;
+$search-form-input-border-radius: 35px;
+$search-form-input-border-color: #011f0e;
+$search-form-input-placeholder-color: #999;
+$search-form-button-bg-color: #333;
+$search-form-button-color: #fff;
+$search-form-button-padding: 0.5rem 1rem;
+$search-form-button-border-radius: 15px;
 
-.info__item {
-  margin: 0;
-  padding: 0;
-}
-
+// стилі для пошукової форми
 .search-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
-}
+  margin: 2rem auto;
+  max-width: 50%;
 
-.search-form input[type="text"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-right: 10px;
-  width: 40%;
-}
+  input[type='text'] {
+    flex: 1;
+    height: 3rem;
+    padding: $search-form-input-padding;
+    border: none;
+    border-radius: $search-form-input-border-radius;
+    border-color: $search-form-input-border-color;
+    font-size: 1rem;
+    color: #333;
 
-.search-form button[type="submit"] {
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+    &::placeholder {
+      color: $search-form-input-placeholder-color;
+    }
+  }
+
+  button[type='submit'] {
+    display: block;
+    margin: 0 auto;
+    margin-left: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $primary-color;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(0, 25, 9, 0.25);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+
+  // стилі для рамки пошукової форми
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+    border: 2px solid $search-form-border-color;
+    border-radius: $search-form-border-radius;
+    pointer-events: none;
+  }
 }
